@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "CalculationManual",
-            targets: ["CalculationManual"]),
+            targets: ["Calculations"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -19,12 +19,12 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.        
-        .target(
-            name: "CalculationManual",
-            dependencies: [
-                .target(name: "Calculations"),
-                .product(name: "GreetSPM", package: "GreetSPM")
-            ]),
+//        .target(
+//            name: "CalculationManual",
+//            dependencies: [
+//                .target(name: "Calculations"),
+//                .product(name: "GreetSPM", package: "GreetSPM")
+//            ]),
         .binaryTarget(
             name: "Calculations",
             path: "./Sources/Calculations.xcframework"
